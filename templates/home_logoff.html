@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Flask Intro - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Not logged in.</h1>
+      <br>
+      <form action="/login" method="get">
+        <input type="submit" value="Login" name="Submit" id="frm1_submit" />
+      </form>
+
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+    </div>
+  </body>
+</html>
